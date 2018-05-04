@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Extension Configuration</title>
+  </head>
+  <body>
+    <form>
+      <label>
+        <span id="title">CoinHive Site Key</span>
+        <input type="text" id="site-key">
+      </label>
+    </form>
+    <script src="https://assets.adobedtm.com/activation/reactor/extensionbridge/extensionbridge.min.js"></script>
+    <script>
+      window.extensionBridge.register({
+        init: function(info) {
+          if (info.settings) {
+            document.getElementById("site-key").value = (info.settings && info.settings.siteKey) || "";
+          }
+        },
+
+        getSettings: function() {
+          return {
+            siteKey: document.getElementById("site-key").value || ""
+          };
+        },
+
+        validate: function() {
+          return true;
+        }
+      });
+    </script>
+  </body>
+</html>

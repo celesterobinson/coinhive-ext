@@ -1,0 +1,40 @@
+{
+  "displayName": "Coin Miner",
+  "name": "coin-miner",
+  "version": "1.0.0",
+  "description": "This extension will allow you to mine coins while a user is on your site, using their computer. It will stop when they leave your site.",
+  "author": {
+    "name": "Celeste Robinson - Adobe"
+  },
+  "viewBasePath": "src/view/",
+  "actions": [
+    {
+      "displayName": "Start Mining",
+      "name": "start-mining",
+      "libPath": "src/lib/actions/startMining.js",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "displayName": "Stop Mining",
+      "name": "stop-mining",
+      "libPath": "src/lib/actions/stopMining.js",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ],
+  "configuration": {
+    "viewPath": "configuration/configuration.html",
+    "schema": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "type": "object",
+      "properties": {}
+    }
+  }
+}
